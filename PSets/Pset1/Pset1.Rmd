@@ -60,7 +60,12 @@ Please fill out this brief (ungraded) survey to help Professor Saghafian and the
 ## Data Questions (15 pts)
 
 
-For this part of the problem set, please load the MASchools dataset from the package AER. Also, for any non-integer numbers, please report your numbers to exactly two decimal places for full credit.
+*Introduction to NICU Length of Stay Prediction*
+
+This dataset presents a simulated scenario of neonatal intensive care unit (NICU) admissions, capturing a variety of clinical factors at the time of admission. Predicting the length of stay (LOS) in the NICU is a critical task that can significantly impact hospital resource planning, cost management, and patient care strategies. For hospital administrators and policymakers, accurately forecasting NICU LOS facilitates better allocation of resources, improves the quality of care, and aids in the development of efficient operational policies. You can read more about the variables in this dataset [here](https://github.com/jacobjameson/api222/tree/main/PSets/Pset1). If you are curious about how I created this dataset, you can find the code [here](https://github.com/jacobjameson/api222/blob/main/PSets/Pset1/sim_data.R]).
+
+
+Also, for any non-integer numbers, please report your numbers to exactly two decimal places for full credit.
 
 
 **1. Preliminary data exploration (5 pts)**
@@ -77,28 +82,33 @@ For this part of the problem set, please load the MASchools dataset from the pac
 (e) Create a scatter plot of NICU length of stay (y-axis) on gestational age (x-axis). What does the plot tell you about the relationship between these two variables?
 
 
-For the next few questions, first omit any rows (observations) with NA values and drop the District and Municipality variables. Then put the last 35 observations (after dropping rows with NA values) in a test set and the remaining observations in a training set.
+For the next few questions, first omit any rows (observations) with `NA` values. Then put the last 35 observations (after dropping rows with NA values) in a test set and the remaining observations in a training set.
 
 
-**2. When you use your training data to build a linear model that regresses overall 8th grade score on all other features available in the data (plus an intercept), what is your test Mean Squared Error? (2 pt)**
 
-**3. Now use your training data to build a linear model that regresses overall 8th grade score on only three variables: total per-pupil expenditure, percentage qualifying for reduced-price lunch, and student-teacher ratio (include an intercept)**
+**2. When you use your training data to build a linear model that regresses NICU LOS on all other features available in the data (plus an intercept), what is your test Mean Squared Error? (2 pt)**
+
+
+**3. Now use your training data to build a linear model that regresses NICU LOS on only three variables: total per-pupil expenditure, percentage qualifying for reduced-price lunch, and student-teacher ratio (include an intercept)**
 
 (a) What is your test MSE? (1 pt)
 
+
 (b) Which coefficient changes the most between the regression in the previous question and the regression in this question? (1 pt)
+
 
 (c) What was the coefficient’s value under the regression from the previous question? (1pt)
 
+
 (d) What is the coefficient’s value under the current regression? (1 pt)
 
+
 (e) Provide some intuition for what it means that this coefficient changed significantly between the two regressions. (1 pt)
+
     
-    
-**4. When you use your training data to build a KNN model that regresses overall 8th grade score on all other features in the data, what is your test Mean Squared Error with $K = 2$? (2 pt)**
+**4. When you use your training data to build a KNN model that regresses NICU LOS on all other features in the data, what is your test Mean Squared Error with $K = 2$? (2 pt)**
 
 
-
-**5. When you use your training data to build a KNN model that regresses overall 8th grade score on all other features in the data, what is your test Mean Squared Error with $K = 10$? (1 pt)**
+**5. When you use your training data to build a KNN model that regresses NICU LOS on all other features in the data, what is your test Mean Squared Error with $K = 10$? (1 pt)**
 
 
